@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import styled from '@emotion/styled'
 import Header from '../Header'
-// import Footer from '../Footer'
+import Footer from '../Footer'
 
 interface LayoutProps {
   children: ReactNode
@@ -12,14 +12,12 @@ export default function Layout({ children }: LayoutProps) {
     <Wrapper>
       <Header />
       <Main>{children}</Main>
-      {/* <Footer /> */}
+      <Footer />
     </Wrapper>
   )
 }
 
 export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
 `
 
