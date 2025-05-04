@@ -1,5 +1,5 @@
 import * as S from './style'
-import { FaFacebookF, FaBloggerB, FaTwitter, FaInstagram } from 'react-icons/fa'
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa'
 import { SiNaver } from 'react-icons/si'
 
 const GroupListMenus = [
@@ -69,10 +69,10 @@ export default function Footer() {
 
         <S.Links>
           <S.IconLink href="#" aria-label="Facebook"><FaFacebookF /></S.IconLink>
-          <S.IconLink href="#" aria-label="Blogger"><FaBloggerB /></S.IconLink>
-          <S.IconLink href="#" aria-label="Naver"><SiNaver /></S.IconLink>
-          <S.IconLink href="#" aria-label="Twitter"><FaTwitter /></S.IconLink>
-          <S.IconLink href="#" aria-label="Instagram"><FaInstagram /></S.IconLink>
+          <S.IconLink href="#" aria-label="Blogger" size={22}>B</S.IconLink>
+          <S.IconLink href="#" aria-label="Naver" size={16}><SiNaver /></S.IconLink>
+          <S.IconLink href="#" aria-label="Twitter" size={20}><FaTwitter /></S.IconLink>
+          <S.IconLink href="#" aria-label="Instagram" size={22}><FaInstagram /></S.IconLink>
         </S.Links>
       </S.Inner>
     </S.Wrapper>

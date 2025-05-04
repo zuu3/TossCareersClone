@@ -7,7 +7,7 @@ export const Wrapper = styled.footer`
   color: #6b7684;
 `
 export const Inner = styled.div`
-  max-width: 1200px;
+  max-width: 950px;
   margin: 0 auto;
 `
 export const GroupList = styled.div`
@@ -38,15 +38,16 @@ export const Address = styled.address`
   line-height: 1.6;
   margin-bottom: 40px;
   color: #8b95a1;
-  & span {
-    color: #6b7684;
-    cursor: pointer;
+
+  & div {
+    font-size: 14px;
   }
 `
-export const CompanyName = styled.div`
+export const CompanyName = styled.span`
   font-weight: bold;
   color: #333d4b;
-  margin-bottom: 8px;
+  display: block;
+  margin-bottom: 12px;
 `
 export const PolicyContainer = styled.div`
   display: flex;
@@ -76,16 +77,17 @@ export const Links = styled.div`
   justify-content: flex-start;
 `
 
-export const IconLink = styled.a`
+export const IconLink = styled.a<{ size?: number }>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #dee2e6;
+  background: #b2b7bf;
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  color: #6b7684;
-  font-size: 18px;
+  color: #fff;
+  font-size: ${({ size }) => (size ? `${size}px` : '18px')};
+  font-weight: bold;
   text-decoration: none;
   &:hover {
     background: #ced4da;
