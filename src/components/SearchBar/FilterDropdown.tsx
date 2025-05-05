@@ -4,8 +4,9 @@ import { FaChevronDown } from 'react-icons/fa'
 
 interface Props {
   icon: 'briefcase' | 'building' | 'user-friends'
-  label: string
   options: string[]
+  selected: string
+  onSelect: (v: string) => void
 }
 
 const iconMap: Record<Props['icon'], string> = {
@@ -14,9 +15,8 @@ const iconMap: Record<Props['icon'], string> = {
   'user-friends': '👥',
 }
 
-export default function FilterDropdown({ icon, label, options }: Props) {
+export default function FilterDropdown({ icon, options, selected, onSelect }: Props) {
   const [open, setOpen] = useState(false)
-  const [selected, setSelected] = useState(label)
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function FilterDropdown({ icon, label, options }: Props) {
           {options.map((opt, i) => (
             <S.Option
               key={i}
-              onClick={() => { setSelected(opt); setOpen(false) }}
+              onClick={() => { onSelect(opt); setOpen(false) }}
             >
               {opt}
             </S.Option>
